@@ -1,0 +1,24 @@
+<div class="container">
+<h2><strong>Products</strong></h2>
+   	<ul class="list-group user-list">
+
+	 	<li class="list-group-item" ng-repeat="p in vm.products">
+			<div class="user-info">
+		    	<div class="col-sm-10">
+		        <strong>{{p.name}}</strong>
+		        <strong>{{p.price}}</strong>
+		        </div>
+
+		        <div class="col-sm-1">
+					<a ui-sref="product({id:p._id})" class=""><span class="fa fa-edit fa-2x">Edit</span></a>
+				</div>
+				<div class="col-sm-1">
+					<a ng-click="vm.delete(t)" class="trash"><span class="fa fa-trash fa-2x">Delete</span></a>
+				</div>
+	    	</div>
+		</div>
+
+
+
+	</ul
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+   	<div class="row" >
+
+		
+		<form class="form" name="form" ng-submit="vm.saveProduct(form)" novalidate>
+			<input type="hidden" name="_id" value="{{vm.product._id}}" />
+
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" name="name" class="form-control" ng-model="vm.product.name" mongoose-error/>
+				<p class="help-block" ng-show="form.name.$error.mongoose">
+					{{ vm.errors.other }}
+				</p>
+			</div>
+
+			<div class="form-group">
+				<label>Price</label>
+				<input type="text" name="price" class="form-control" ng-model="vm.product.price" mongoose-error/>
+				<p class="help-block" ng-show="form.price.$error.mongoose">
+					{{ vm.errors.other }}
+				</p>
+			</div>
+			<button class="btn btn-lg btn-primary" type="submit">Save changes</button>
+		</form>
+
+
+
+	</div>
+</div>
