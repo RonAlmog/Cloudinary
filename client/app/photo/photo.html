@@ -1,8 +1,13 @@
 <div class="container">
    	<div class="row" >
-
+   	<h2>Upload photo</h2>
 		
-		<form class="form" name="form" ng-submit="vm.saveProduct(form)" novalidate>
+	
+
+
+
+
+	<form class="form" name="form" action="/photos/direct" method="post" novalidate>
 			<input type="hidden" name="_id" value="{{vm.product._id}}" />
 
 			<div class="form-group">
@@ -20,14 +25,14 @@
 					{{ vm.errors.other }}
 				</p>
 			</div>
-			<button class="btn btn-lg btn-primary" type="submit">Save changes</button>
+
+			<div class="form-group">
+				<label>Photo</label>
+				<a href="#" class='upload_button'>Upload</a>
+				
+			</div>
+
+			<button class="btn btn-lg btn-primary" type="submit">Submit product</button>
 		</form>
 
-
-
-	</div>
 </div>
-
-    <script>
-        //cloudinary.cloudinary_js_config();
-    </script>

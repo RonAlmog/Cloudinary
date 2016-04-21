@@ -11,6 +11,9 @@ class NavbarController {
   },{
     'title': 'Add Prod',
     'state': 'product'
+  },{
+    'title': 'Photo',
+    'state': 'photo'
   }];
 
   isCollapsed = true;
